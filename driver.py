@@ -33,7 +33,7 @@ def body_choice():
 def driver():
     # Get which account to send from
     email_choice = email_selector()
-    file_choice = "data/firstemail.csv"
+    file_choice = file_selector()
     outreach_number = 0
 
     if file_choice is None:
