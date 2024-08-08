@@ -11,15 +11,15 @@ def email_selector():
 
     choice = input("Please enter the number corresponding to the email: ")
 
-    return choice
+    return int(choice)
 
 def file_selector(choice):
     if (choice == 1):
-        return 'firstemail.csv'
+        return 'csv_files/firstemail.csv'
     elif (choice == 2):
-        return 'secondemail.csv'
+        return 'csv_files/secondemail.csv'
     elif (choice == 3):
-        return 'thirdemail.csv'
+        return 'csv_files/thirdemail.csv'
 
 def subject_selector():
     choice = 0
@@ -33,17 +33,27 @@ def body_choice():
 def driver():
     # Get which account to send from
     email_choice = email_selector()
-    subject_choice = 0
-    body_choice = 0
-    file_choice = file_selector(email_choice)
+    file_choice = "data/firstemail.csv"
+    outreach_number = 0
+
+    if file_choice is None:
+        print("Invalid file choice. Exiting.")
+        return
 
     # Read the CSV file
-    with open(file_choice, mode='r', newline='') as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            name = row['name']
-            email = row['email']
-            send_email(name, email, email_choice, subject_choice, body_choice)
+    try:
+        with open(file_choice, mode='r', newline='') as file:
+            reader = csv.DictReader(file)
+            print("Opened csv file")
+            for row in reader:
+                name = row['name']
+                email = row['email']
+                print(f"Processing email for {name} at {email}")  # Debug print
+                send_email(name, email, email_choice, outreach_number)
+    except FileNotFoundError:
+        print(f"File not found: {file_choice}")
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
             
 
 if __name__ == "__main__":

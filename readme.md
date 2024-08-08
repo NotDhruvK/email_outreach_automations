@@ -62,3 +62,11 @@ To use the code, open Terminal and type
 ```
 python3 driver.py
 ```
+
+# Getting the chages from github
+
+In order to update your files to the latest version, run
+
+```
+git pull origin main
+```
