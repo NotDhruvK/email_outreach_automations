@@ -60,6 +60,14 @@ These files need to be located in the same directory as the rest of the python f
 To use the code, open Terminal and type
 
 ```
+cd /Desktop/email_outreach
+```
+
+Alternatively, you can use `Tab` to autocomplete the result in the terminal.
+
+Change the directory to `email_outreach` and then run the following:
+
+```
 python3 driver.py
 ```
 
