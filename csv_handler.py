@@ -1,3 +1,4 @@
+#This file contains all the functions regarding CSV files.
 import pandas as pd
 
 def csv_to_dataframe():
@@ -11,7 +12,7 @@ def csv_to_dataframe():
         DataFrame: The DataFrame containing the CSV data.
     """
     try:
-        df = pd.read_csv("data/firstemail.csv")
+        df = pd.read_csv("data/contacts.csv")
         print("Successfully read csv file.")
         return df
     except Exception as e:
@@ -30,12 +31,10 @@ def dataframe_to_csv(df):
         None
     """
     try:
-        file_path = 'data/firstemail.csv'  # Replace with your actual file path
+        file_path = 'data/contacts.csv'  # Replace with your actual file path
 
         # Write the updated DataFrame back to the CSV file
         df.to_csv(file_path, index=False)
-        print(f"Updated DataFrame successfully saved to {file_path}.")
-
     except Exception as e:
         print(f"An error occurred: {str(e)}")
 

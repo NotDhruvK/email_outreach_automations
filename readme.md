@@ -46,14 +46,10 @@ cd {path_of_the_file}
 
 ## Updating the files
 
-The way this project is set up, you will have three files which will be responsible for the email sending. These are
-
-1. firstemail.csv
-2. secondemail.csv
-3. thirdemail.csv
-
-**You will need to update these files daily. Fill them with 60 emails daily.**
-These files need to be located in the same directory as the rest of the python files.
+The way this project is set up, you have only one file which will be used for email sending. The name of the file is **contacts.csv**
+Make sure that you correctly fill in the NAME and the EMAIL in this file. It is optional to fill in the ACCOUNT and OUTREACH numbers.
+**You will need to update this file daily. Fill it with 180 emails daily.**
+This file needs to be located in the same directory as the rest of the python files.
 
 ## Using the code
 
@@ -66,6 +62,14 @@ cd /Desktop/email_outreach
 Alternatively, you can use `Tab` to autocomplete the result in the terminal.
 
 Change the directory to `email_outreach` and then run the following:
+
+**If you want to clean and sort the data**
+
+```
+python3 process_data.py
+```
+
+**If you want to send the emails**
 
 ```
 python3 driver.py
