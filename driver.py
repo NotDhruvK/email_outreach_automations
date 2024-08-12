@@ -63,7 +63,7 @@ def driver():
             accounts_used = {1: 0, 2: 0, 3: 0}
 
         # Calculate estimated time required
-        estimated_time = ((total_emails_to_send - email_counter) * 3) / 60
+        estimated_time = (total_emails_to_send - email_counter) / 60
         print(f"Estimated time left for completion: {estimated_time:.2f} hours.")
 
     # Sort and save the updated dataframe back to the CSV file
