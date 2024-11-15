@@ -10,46 +10,40 @@ logging.basicConfig(filename='errors.txt', level=logging.ERROR)
 SMTP_SERVER = 'smtpout.secureserver.net'
 SMTP_PORT = 465
 
-def send_email(to_name, to_email, email_option, outreach_number):
+def send_email(to_name, to_email, email_option):
+    # Replace these email settings with your own
     if (email_option == 1):
-        username = "swam@cognicraftagency.live"
-        password = "Shirtpant#23"
+        username = "drew@automateyourworkplace.site"
+        password = "Shirtpant123#"
     elif (email_option == 2):
-        username = "swamc@cognicraftagency.live"
-        password = "Shirtpant#23"
+        username = "drewa@automateyourworkplace.site"
+        password = "Shirtpant123#"
     elif (email_option == 3):
-        username = "swam@cognicraftagency.solutions"
-        password = "Shirtpant#23"
+        username = "drew@automateyourworkplace.store"
+        password = "Shirtpant123#"
     elif (email_option == 4):
-        username = "swamc@cognicraftagency.solutions"
-        password = "Shirtpant#23"
+        username = "drewa@automateyourworkplace.store"
+        password = "Shirtpant123#"
     elif (email_option == 5):
-        username = "swam@cognicraftagency.agency"
-        password = "Shirtpant#23"
+        username = "drew@automateyourworkplace.shop"
+        password = "Shirtpant123#"
     elif (email_option == 6):
-        username = "swamc@cognicraftagency.agency"
-        password = "Shirtpant#23"
+        username = "drewa@automateyourworkplace.shop"
+        password = "Shirtpant123#"
     elif (email_option == 7):
-        username = "swam@cognicraftagency.tech"
-        password = "Shirtpant#23"
+        username = "drew@automateyourworkplace.online"
+        password = "Shirtpant123#"
     elif (email_option == 8):
-        username = "swamc@cognicraftagency.tech"
-        password = "Shirtpant#23"
+        username = "drewa@automateyourworkplace.online"
+        password = "Shirtpant123#"
     elif (email_option == 9):
-        username = "swam@cognicraftagency.site"
-        password = "Shirtpant#23"
+        username = "drew@automateyourworkplace.fun"
+        password = "Shirtpant123#"
     elif (email_option == 10):
-        username = "swamc@cognicraftagency.site"
-        password = "Shirtpant#23"
-    elif (email_option == 11):
-        username = "swam@cognicraftagency.today"
-        password = "Shirtpant#23"
-    elif (email_option == 12):
-        username = "swamc@cognicraftagency.today"
-        password = "Shirtpant#23"
+        username = "drewa@automateyourworkplace.fun"
+        password = "Shirtpant123#"
     
     try:
-        # Set up the server
         # Set up the server
         with smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT) as server:
             server.login(username, password)
@@ -59,17 +53,14 @@ def send_email(to_name, to_email, email_option, outreach_number):
             body = f"""\
                     <html>
                         <body>
-                            <p>Hey {to_name},</p>
-                            <p>Been trying very hard to find your email, lol. I know this may come off as weird, but I thought I’d reach out nonetheless.</p>
-                            <p>My name is Swam and I’ve been helping Therapy & Counselling Practices generate new clientele and grow their business for more than a year now.<br>
-                            Our System, which combines the power of Targeted Advertising with DCT Automated Prospecting, gets you more than a dozen new client opportunities every single month!.<br> 
-                            And the best part about this is that you don't have even have to pay us anything upfront!</p>
-                            <p>Yes, you read that right.</p>
-                            <p>We'll generate leads, work those leads, and convert them into qualified booked calls. Not just that, we will also take care of all advertising and appointment scheduling, ensuring that we deliver on our promise of providing you with a complete ROI.</p>
-                            <p>Right now, we're offering a 14-day free trial of our entire system, so that you can test it out without any risk or commitments. You can get more info about this on our website as well!</p>
-                            <p>This is a limited time offer though, so check out our website and book a call with me or reach out by simply replying to this email and I'll give you a call to fill you in about this. (Don't forget to mention the best time to call you in your reply :)</p>
-                            <p>Looking forward to sepaking to you!!</p>
-                            <p>Best,<br>Swam</p>
+                           <p>Hey {to_name},</p> 
+                           <p>I’ve been trying to get in touch for a while now! I know this message is a little out of the blue, but I thought I’d reach out anyway.</p> 
+                           <p>I’m Drew, and I’ve been helping businesses like yours work faster and more easily with smart automation systems for over a year. Our system can simplify your workflows, cut down on manual tasks, and help things run smoother and with fewer mistakes. And the best part? We’re offering a <strong>40% discount</strong> for a limited time!</p> 
+                           <p>Yes, you read that right.</p> 
+                           <p>Here’s how it helps, {to_name}: we’ll automate your scheduling, client management, follow-ups, and more. That way, you can focus on growing your business while we handle the heavy lifting in the background. Just sit back and enjoy the extra efficiency!</p> 
+                           <p>Right now, we’re offering a <strong>limited-time 40% discount</strong> on our full automation package. If you’d like to learn more or give it a try, reply to this email or check out our website to book a call with me. Don’t forget to let me know the best time to reach you!</p> 
+                           <p>Looking forward to speaking with you soon!</p> 
+                           <p>Best,<br>Drew</p>
                         </body>
                     </html>
                     """
@@ -77,7 +68,7 @@ def send_email(to_name, to_email, email_option, outreach_number):
             msg = MIMEMultipart()
             msg['From'] = username
             msg['To'] = to_email
-            msg['Subject'] = f"Hey {to_name}, are you still taking on new clients"
+            msg['Subject'] = f"Hey {to_name}, tired of wasting time on manual tasks?"
             msg.attach(MIMEText(body, 'html'))
 
             # Send the email
@@ -87,3 +78,7 @@ def send_email(to_name, to_email, email_option, outreach_number):
     except Exception as e:
         # Log any errors
         logging.error(f"Failed to send email to {to_name} ({to_email}): {str(e)}")
+
+if __name__ == "__main__":
+    # This is only for testing purposes
+    send_email("Dhruv", "dhruvadam@gmail.com", 1)

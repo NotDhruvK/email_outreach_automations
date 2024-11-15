@@ -5,8 +5,8 @@ from email.mime.multipart import MIMEMultipart
 def test_email():
     SMTP_SERVER = 'smtpout.secureserver.net'
     SMTP_PORT = 465
-    USERNAME = 'swam@cognicraftagency.website'
-    PASSWORD = 'Shirtpant#23'
+    USERNAME = 'drewa@automateyourworkplace.site'
+    PASSWORD = 'Shirtpant123#'
 
     msg = MIMEMultipart()
     msg['Subject'] = 'Test Email'
@@ -24,15 +24,14 @@ def test_email():
             body = f"""
                     <html>
                         <body>
-                            <p>Hey Dhruv,</p>
-                            <p>Been trying very hard to find your email, lol. I know this may come off as weird, but I thought I’d reach out nonetheless.</p>
-                            <p>My name is Swam and I’ve been helping Therapy & Counselling Practices generate new clientele and grow their business for more than a year now.<br>
-                            Our Expert Growth Program, which combines the power of AI Advertising with DCT Automated Prospecting, gets you a minimum of 10+ new client opportunities every single month!</p>
-                            <p>Yes, you read that right.</p>
-                            <p>We'll generate leads, work those leads, and convert them into qualified booked calls. Not just that, we will also take care of all advertising and appointment scheduling, ensuring that we deliver on our promise of providing you with a minimum of 10+ client opportunities per month.</p>
-                            <p>Would you mind jumping on a quick Zoom call later this week? I'll let you in on how our Expert Growth Program exactly works. If you want, we can set it up for you or you can keep the entire thing for yourself. Seems like a win-win, right?<br>
-                            Would love to provide loads of value!</p>
-                            <p>Best,<br>Swam</p>
+                           <p>Hey Dhruv,</p> 
+                           <p>I’ve been trying to get in touch with you for a while now, lol. I know this may seem a bit out of the blue, but I thought I’d reach out anyway.</p> 
+                           <p>My name is Drew, and I’ve been helping businesses like yours streamline their operations and run more efficiently through powerful automation systems for over a year now.<br> Our Automation System is designed to simplify your workflows, reduce manual tasks, and help your business operate smoother, faster, and with fewer errors.<br> And here’s the best part: We’re currently offering a <strong>40% discount</strong> for a limited time!</p> 
+                           <p>Yes, you read that right.</p> 
+                           <p>We’ll automate your scheduling, client management, follow-ups, and more, allowing you to focus on growing your business while we handle the heavy lifting in the background. All you need to do is sit back and enjoy the increased efficiency!</p> 
+                           <p>Right now, we’re offering a <strong>limited-time 40% discount</strong> on our full automation package. If you’re interested in learning more or trying it out, simply reply to this email or visit our website to book a call with me. Don’t forget to let me know the best time to reach you!</p> 
+                           <p>Looking forward to speaking with you soon!</p> 
+                           <p>Best,<br>Drew</p>
                         </body>
                     </html>
                     """
