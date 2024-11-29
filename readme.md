@@ -1,84 +1,27 @@
-# Getting set up
+# The Definitive Guide to using this.
 
-Firstly you will need to install python and git on your machine.
+## Starting the environment.
 
-```
-brew install python
-brew install git
-```
+1. Firstly start the command prompt and navigate to the folder containing the files.
+2. Then start the virtual environment by using the command
 
-# Packages to be installed
-
-Thease are the dependencies that need to be installed on your machine in order to successfully run the program
-
-```
-pip install {package_name}
+```bash
+    .venv\Scripts\Activate
 ```
 
-The list of packages are 1. smptlib
+3. Once activated, the command prompt should have `(venv)` at the beginning of the line.
 
-Just replace the name of the package as given in the list into the command.
+## Setting up the CSV
 
-# Using the Scripts
+1. The CSV file needs to have the format `name,email`.
+2. Make sure to include headers and have no spaces in between the entries.
+3. Better still, use excel to make the csv file.
 
-## Locating the files.
+## Making changes to the scripts
 
-In order to use the script, firstly you need to get to the location of the file in your computer.
-After opening terminal,
+1. Before running navigate to csv_handler.py
+2. In the line `df = pd.read_csv("C:/Users/Dhruv/Desktop/Work/day3.csv")`, replace the path to the path of the CSV file you created.
 
-```
-pwd
-```
+## Running the script
 
-This will show you the current working directory.
-
-```
-cd ..
-```
-
-This command will allow you to go up in your folder structure.
-**OR**
-You can directly enter the path of your working directory in the terminal interface.
-
-```
-cd {path_of_the_file}
-```
-
-## Updating the files
-
-The way this project is set up, you have only one file which will be used for email sending. The name of the file is **contacts.csv**
-Make sure that you correctly fill in the NAME and the EMAIL in this file. It is optional to fill in the ACCOUNT and OUTREACH numbers.
-**You will need to update this file daily. Fill it with 180 emails daily.**
-This file needs to be located in the same directory as the rest of the python files.
-
-## Using the code
-
-To use the code, open Terminal and type
-
-```
-cd /Desktop/email_outreach
-```
-
-Alternatively, you can use `Tab` to autocomplete the result in the terminal.
-
-Change the directory to `email_outreach` and then run the following:
-
-**If you want to clean and sort the data**
-
-```
-python3 process_data.py
-```
-
-**If you want to send the emails**
-
-```
-python3 driver.py
-```
-
-# Getting the chages from github
-
-In order to update your files to the latest version, run
-
-```
-git pull origin main
-```
+1. After enabling the virtual environment, run the command `python driver.py` in the command prompt.

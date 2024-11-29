@@ -14,7 +14,7 @@ def csv_to_dataframe():
     try:
         # Just replace the file path of the leads.
         # Make sure that the CSV headers are name, email.
-        df = pd.read_csv("C:/Users/Dhruv/Desktop/Work/day1.csv")
+        df = pd.read_csv("C:/Users/Dhruv/Desktop/Work/day3.csv")
         print("Successfully read csv file.")
         return df
     except Exception as e:
